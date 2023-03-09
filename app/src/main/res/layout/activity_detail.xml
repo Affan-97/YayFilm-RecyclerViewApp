@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailActivity">
+  <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+      android:orientation="vertical">
+      <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+          <ImageView
+                  android:layout_width="128dp"
+                  android:layout_height="174dp"
+                  tools:src="@tools:sample/avatars"
+                  app:layout_constraintEnd_toStartOf="@+id/guideline"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                  app:layout_constraintHorizontal_bias="0.444"
+                  android:id="@+id/imageView"
+                  app:layout_constraintVertical_bias="0.511" />
+
+          <androidx.constraintlayout.widget.Guideline
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/guideline"
+                  android:orientation="vertical"
+                  app:layout_constraintGuide_end="220dp" />
+
+          <androidx.constraintlayout.widget.Guideline
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/guideline2"
+                  app:layout_constraintGuide_begin="260dp"
+                  android:orientation="horizontal" />
+
+          <TextView
+                  android:text="@string/List_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvTitle"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  android:maxWidth="150dp"
+                  app:layout_constraintStart_toStartOf="@+id/guideline"
+                  android:layout_marginStart="16dp"
+                  app:layout_constraintHorizontal_bias="0.0"
+                  app:layout_constraintTop_toBottomOf="@+id/tvTitle2"
+                  android:layout_marginTop="8dp" />
+
+          <TextView
+                  android:text="@string/judul"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvTitle2"
+                  android:textStyle="bold"
+                  app:layout_constraintStart_toStartOf="@+id/guideline"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:layout_marginTop="44dp"
+                  android:layout_marginStart="16dp" />
+
+          <TextView
+                  android:text="@string/sutradara"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvTitle3"
+                  android:textStyle="bold"
+                  app:layout_constraintStart_toStartOf="@+id/guideline"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginTop="16dp"
+                  app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+          <TextView
+                  android:text="@string/tanggal_rilis"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvTitle4"
+                  android:textStyle="bold"
+                  app:layout_constraintStart_toStartOf="@+id/guideline"
+                  android:layout_marginStart="16dp"
+                  app:layout_constraintTop_toBottomOf="@+id/tvDirector"
+                  android:layout_marginTop="16dp" />
+
+          <TextView
+
+                  android:text="director"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvDirector"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  android:maxWidth="150dp"
+                  app:layout_constraintTop_toBottomOf="@+id/tvTitle3"
+                  app:layout_constraintStart_toStartOf="@+id/guideline"
+                  app:layout_constraintHorizontal_bias="0.0"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginStart="16dp" />
+
+          <TextView
+                  android:text="tanggal"
+                  android:layout_width="173dp"
+                  android:layout_height="22dp"
+                  android:id="@+id/tvDate"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  android:maxWidth="150dp"
+                  app:layout_constraintTop_toBottomOf="@+id/tvTitle4"
+                  app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                  app:layout_constraintVertical_bias="0.0"
+                  app:layout_constraintStart_toStartOf="@+id/guideline"
+                  app:layout_constraintHorizontal_bias="0.0"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginStart="16dp" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+      <TextView
+              android:text="Sinopsis :"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/tvSinopsis"
+              android:textStyle="bold"
+              app:layout_constraintStart_toStartOf="@+id/guideline"
+              android:layout_marginStart="24dp"
+              android:layout_marginEnd="24dp"
+              android:layout_marginTop="8dp"
+              app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+      <TextView
+
+              android:text="Sinopsis"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="end"
+              android:id="@+id/tvDesc"
+              android:lineHeight="20dp"
+              app:layout_constraintTop_toBottomOf="@+id/tvDirector"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="@+id/guideline"
+              android:layout_marginStart="24dp"
+              android:layout_marginEnd="24dp"
+              android:layout_marginTop="16dp"
+              android:justificationMode="inter_word"/>
+      <Button
+              android:id="@+id/action_share"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/share"
+              android:layout_marginEnd="16dp"
+              android:layout_marginStart="16dp"
+              android:layout_marginTop="24dp"/>
+  </LinearLayout>
+
+</ScrollView>
